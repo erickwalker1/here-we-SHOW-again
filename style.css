@@ -1,6 +1,36 @@
-.greyBlocks{
+.greyBlocks19{
     height: 100px;
     width: 20px;
     background-color: grey;
     margin: 5px;
 }
+
+.greyBlocks20 {
+    height: 20px;
+    background-color: grey;
+    margin: 5px;
+  }
+
+  .greyBlocks21 {
+    height: 20px;
+    background-color: grey;
+    margin: 5px;
+  }
+
+  .greyBlocks22 {
+    height: 20px;
+    background-color: grey;
+    margin: 5px;
+  }
+  
+  .greyBlocks22:nth-child(odd) {
+    height: 20px;
+    background-color: red;
+    margin: 5px;
+  }
+  
+  .greyBlocks23 {
+    height: 20px;
+    background-color: grey;
+    margin: 5px;
+  }

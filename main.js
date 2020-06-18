@@ -183,7 +183,6 @@ for (index = 0; index < sampleArray.length; index++) {
     }
 }
 
-
   //Display all the square numbers contained in sampleArray. (469, 755, 245, …, 179, 535)
 
 createHeadingElements('KATA 14')
@@ -200,25 +199,10 @@ for (index = 0; index < sampleArray.length; index++) {
     let currentIndex2 = sampleArray2[index]
 
     let liElement = document.createElement('li')
-
         parentElement.append(kata14List)
         kata14List.append(liElement)
         liElement.append(currentIndex2)
-    
-
-    /*const PerfectSquare = Number.isInteger(Math.sqrt(index))
-
-    if (PerfectSquare) {
-        let liElement = document.createElement('li')
-        parentElement.append(kata14List)
-        kata14List.append(liElement)
-        liElement.append(currentIndex)
-    }   */
-
 }
-
-
-
 
 
 createHeadingElements("KATA 15");
@@ -237,7 +221,8 @@ for (let counter = 1; counter <= 20; counter += 1) {
   }
 }
 
-// 16.Display the sum of all the elements in sampleArray.
+// KATA 16
+//Display the sum of all the elements in sampleArray.
 
 createHeadingElements("KATA 16");
 const kata16List = document.createElement("ul");
@@ -254,6 +239,7 @@ for (let counter = 0; counter < sampleArray.length; counter += 1) {
     liElement.append(total16);
   }
 }
+// KATA 17
 // Display the smallest element in sampleArray.
 
 createHeadingElements("KATA 17");
@@ -265,23 +251,75 @@ parentElement.append(kata17List);
 kata17List.append(liElement);
 liElement.append(min);
 
+//KATA 18
+//Display Largest Element in sampleArray
 
-/*createHeadingElements('Kata 18')
+createHeadingElements('Kata 18')
 const kata18List = document.createElement('ul')
 let max = sampleArray.reduce(function (a, b) {
     return Math.max(a, b);
 
 });
-let liElement = document.createElement("li")
+let liElement2 = document.createElement("li")
 parentElement.append(kata18List)
-kata18List.append(liElement)
-liElement.append(max)*/
+kata18List.append(liElement2)
+liElement2.append(max)
 
 //Kata 19
 //Display 20 solid gray rectangles, each 20px high and 100px wide.
+
 createHeadingElements('KATA 19')
 for (counter = 0; counter < 20; counter += 1) {
     const greyDiv = document.createElement('div')
-    greyDiv.setAttribute('class', 'greyBlocks')
+    greyDiv.setAttribute('class', 'greyBlocks19')
     parentElement.append(greyDiv)
+}
+
+//Kata 20
+//Display 20 solid gray rectangles, each 20px high, with widths ranging evenly from 105px to 200px (remember #4, above).
+
+createHeadingElements("KATA 20");
+let blockwidth20 = 105;
+
+for (counter = 0; counter < 20; counter += 1) {
+  const greyDiv = document.createElement("div");
+  greyDiv.setAttribute("class", "greyBlocks20");
+  greyDiv.style.width = blockwidth20 + "px";
+  blockwidth20 += 5;
+  parentElement.append(greyDiv);
+} 
+
+// Kata 21
+// Display 20 solid gray rectangles, each 20px high, with widths in pixels given by the 20 elements of sampleArray.
+
+createHeadingElements("KATA 21");
+for (counter = 0; counter < 20; counter += 1) {
+  let widthPixels = sampleArray[counter];
+  const greyDiv = document.createElement("div");
+  greyDiv.setAttribute("class", "greyBlocks21");
+  greyDiv.style.width = widthPixels + "px";
+  parentElement.append(greyDiv);
+}
+
+//Kata 22
+createHeadingElements("KATA 22");
+for (counter = 0; counter < 20; counter += 1) {
+  let widthPixels = sampleArray[counter];
+  const greyDiv = document.createElement("div");
+  greyDiv.setAttribute("class", "greyBlocks22");
+  greyDiv.style.width = widthPixels + "px";
+  parentElement.append(greyDiv);
+}
+
+//KATA 23
+createHeadingElements("KATA 23");
+for (counter = 0; counter < 20; counter += 1) {
+  let widthPixels = sampleArray[counter];
+  const greyDiv = document.createElement("div");
+  greyDiv.setAttribute("class", "greyBlocks23");
+  greyDiv.style.width = widthPixels + "px";
+  if (widthPixels % 2 === 0) {
+    greyDiv.style.backgroundColor = "red";
+  }
+  parentElement.append(greyDiv);
 }
