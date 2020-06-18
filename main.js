@@ -193,16 +193,28 @@ const kata14List = document.createElement('ul')
 
 for (index = 0; index < sampleArray.length; index++) {
 
-    let currentIndex = sampleArray[index]
+    const square_it = (element) => element ** 2
 
-    const PerfectSquare = Number.isInteger(Math.sqrt(index))
+    const sampleArray2 = sampleArray.map(square_it)
+
+    let currentIndex2 = sampleArray2[index]
+
+    let liElement = document.createElement('li')
+
+        parentElement.append(kata14List)
+        kata14List.append(liElement)
+        liElement.append(currentIndex2)
+    
+
+    /*const PerfectSquare = Number.isInteger(Math.sqrt(index))
 
     if (PerfectSquare) {
         let liElement = document.createElement('li')
         parentElement.append(kata14List)
         kata14List.append(liElement)
         liElement.append(currentIndex)
-    }   
+    }   */
+
 }
 
 
